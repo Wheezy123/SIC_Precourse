@@ -1,5 +1,5 @@
 # I began with recreating the example in the problem
-# change the range value of 'arr' to 1-10, to verify
+# change the range value of 'arr' to 1-10 and run to verify
 
 # The code seems to be working right, and returns values fine up until
 # the range of 'arr' is increased past 17.  I don't think my computer is
