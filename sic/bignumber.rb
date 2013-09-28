@@ -22,4 +22,4 @@ num =("73167176531330624919225119674426574742355349194934
 
 whole = (num.split("").join("")).to_i
 
-puts whole
+puts whole.class
