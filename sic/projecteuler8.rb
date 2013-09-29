@@ -1,12 +1,3 @@
-## I used 'arr' and 'new_arr' as test values to get started
-# The code works with my small Fixnum values, but will not run when values reach Bignum
-
-class Bignum 
-  include Enumerable
-end
-
-arr = [2,6,7,9,7,5,3,3,4,5,20,10,29]
-
 num =("73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -29,18 +20,16 @@ num =("73167176531330624919225119674426574742355349194934
 71636269561882670428252483600823257530420752963450"
 )
 
-whole_num = (num.split("").join("")).to_i
+whole_num = num.split("")
+whole_num = whole_num.map { |e| e.to_i }
+
 
 new_arr = []
 
-next_5 = (arr.each_cons(5) {|a| new_arr << a
+next_5 = (whole_num.each_cons(5) {|a| new_arr << a
   p a}).to_a
 
- puts"======================================================="
 
-p new_arr
-
-puts "================= method result below =================="
 
 def mult_five(array)
   win = array.map do |(a,b,c,d,e)|
