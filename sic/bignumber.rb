@@ -20,6 +20,22 @@ num =("73167176531330624919225119674426574742355349194934
 71636269561882670428252483600823257530420752963450"
 )
 
-whole = (num.split("").join("")).to_i
+whole_num = num.split("")
+whole_num = whole_num.map { |e| e.to_i }
 
-puts whole.class
+
+new_arr = []
+
+next_5 = (whole_num.each_cons(5) {|a| new_arr << a
+  p a}).to_a
+
+
+
+def mult_five(array)
+  win = array.map do |(a,b,c,d,e)|
+    p a * b * c * d * e
+  end
+  p " The greatest product of five consecutive digits is #{win.max}!!"
+end
+
+mult_five(new_arr)
